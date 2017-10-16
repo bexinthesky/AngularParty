@@ -1,3 +1,49 @@
-ul {
+ol {
+  list-style-position: inside;
   list-style-type: upper-roman;
+}
+
+li {
+  margin-top: 20px;
+}
+
+.btm-margin {
+  margin-bottom: 40px;
+}
+
+.btn-default:focus, .btn-default:hover {
+  background-color: #ffff33;
+  border-color: #ffff33;
+}
+
+input:focus, input:hover {
+  border-color: #ffff33;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  color: rgb(0, 0, 0);
+}
+
+li>a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000099;
+}
+
+.upvotes {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #737373;
+}
+
+.info-text {
+  color: #737373;
+}
+
+.glyphicon, .glyphicon-arrow-up {
+  color: #666666;
+  font-size: 17px;
+  margin: 5px;
 }

@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 btm-margin">
       <form class="form-inline text-center">
         <label for="Subject"></label>
         <input name="subject" type="text" class="form-control" [(ngModel)]="query">
@@ -14,18 +14,18 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-12 center-block">
-      <ul>
+    <div class="col-sm-11 col-sm-offset-1">
+      <ol>
         <li *ngFor="let post of postList">
           <a href="{{ post.data.url }}">
-            {{ post.data.title }}
-            <img src="{{ post.data.thumbnail }}" alt="" class="img-responsive">
+            <span class="text-center">{{ post.data.title }}</span>
           </a>
-          {{ post.data.author }}
-          Upvotes: {{ post.data.ups }}
-          {{ post.data.created | date }}
+          <br><span class="glyphicon glyphicon-arrow-up"></span><span class="upvotes">{{ post.data.ups }} upvotes</span>
+          <img src="{{ post.data.thumbnail }}" alt="" class="img-responsive">
+          <span class="info-text">submitted {{ post.data.created | date }}
+          by {{ post.data.author }}</span>
         </li>
-      </ul>
+      </ol>
     </div>
   </div>
 </div>
