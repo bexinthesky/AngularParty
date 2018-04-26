@@ -13,10 +13,14 @@
       </form>
     </div>
   </div>
+  <input type="text"
+              placeholder="Search List"
+              class="filter-input"
+              [(ngModel)]="searchText">
   <div class="row">
     <div class="col-sm-11 col-sm-offset-1">
       <ol>
-        <li *ngFor="let post of postList">
+        <li *ngFor="let post of postList | searchBy: ['data.title']: [searchText]">
           <a href="{{ post.data.url }}">
             <span class="text-center">{{ post.data.title }}</span>
           </a>

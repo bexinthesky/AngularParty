@@ -3,11 +3,15 @@ import { FormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+//Custom Pipes
+import { SearchByPipe } from './pipes/search-by.pipe';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchByPipe
   ],
   imports: [
     BrowserModule,
